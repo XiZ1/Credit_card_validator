@@ -2,7 +2,8 @@
 
 int main()
 {
-	std::cout << "Hello World!\n";
+	credit_card_validator ccv;
+	ccv.start_luhn_algorithm();
 
 	return 0;
 }
