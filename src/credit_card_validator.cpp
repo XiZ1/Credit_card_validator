@@ -4,6 +4,10 @@
 #include "string"
 #include "Windows.h"
 
+//
+// PUBLIC METHOD
+//
+
 bool credit_card_validator::start_luhn_algorithm(const std::string& card_number)
 {
 	credit_card_number_ = card_number;
@@ -15,6 +19,10 @@ bool credit_card_validator::start_luhn_algorithm(const std::string& card_number)
 	show_message("Credit card number is incorrect!\n", 2000);
 	return false;
 }
+
+//
+// PRIVATE METHOD
+//
 
 bool credit_card_validator::check_lenght_card_number() const
 {
@@ -37,6 +45,9 @@ bool credit_card_validator::card_number_verification()
 	return false;
 }
 
+/**
+ * \brief: This function breaks the credit card number given as a string into single digits and stores them as int.
+ */
 void credit_card_validator::split_the_number()
 {
 	for (int i = 0; i < 16; i++)
@@ -45,6 +56,9 @@ void credit_card_validator::split_the_number()
 	}
 }
 
+/**
+ * \brief: This function looks for even positions in a credit card number and multiplies them by two. 
+ */
 void credit_card_validator::multiply_the_number()
 {
 	for (int i = 15; i >= 0; i--)
@@ -63,6 +77,9 @@ void credit_card_validator::multiply_the_number()
 	}
 }
 
+/**
+ * \brief: This function sums up all digit of a credit card.
+ */
 void credit_card_validator::summing_digits()
 {
 	for (int i = 0; i < 16; i++)
@@ -71,6 +88,10 @@ void credit_card_validator::summing_digits()
 	}
 }
 
+/**
+ * \brief: This function checks the correctness of the provided credit card number. 
+ * \return: Function returns true if sum of credit card digits divided by ten will be integer.
+ */
 bool credit_card_validator::modulo_10() const
 {
 	if (sum_of_digits_ % 10 == 0)
