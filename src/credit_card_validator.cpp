@@ -41,7 +41,7 @@ void credit_card_validator::split_the_number()
 {
 	for (int i = 0; i < 16; i++)
 	{
-		splited_number_[i] = static_cast<int>(credit_card_number_[i]);
+		splited_number_[i] = credit_card_number_[i] - 48;
 	}
 }
 
