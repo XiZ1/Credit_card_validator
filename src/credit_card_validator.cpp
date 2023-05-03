@@ -1,8 +1,12 @@
+/*
+ *	Copyright (C) 2023 Jakub Gorecki - All Rights Reserved.
+ */
+
 // ReSharper disable IdentifierTypo
 
 #include "credit_card_validator.h"
-#include "string"
 #include "Windows.h"
+#include "string"
 
 //
 // PUBLIC METHOD

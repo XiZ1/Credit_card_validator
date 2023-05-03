@@ -1,3 +1,7 @@
+/*
+ *	Copyright (C) 2023 Jakub Gorecki - All Rights Reserved.
+ */
+
 #include "credit_card_validator.h"
 
 int main()
