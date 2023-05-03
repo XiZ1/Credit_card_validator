@@ -2,14 +2,13 @@
 
 int main()
 {
+	credit_card_validator ccv;
 	do
 	{
-		int card_number = 0;
+		std::string card_number;
 		system("cls");
 		std::cout << "Enter the credit card number: ";
 		std::cin >> card_number;
-		credit_card_validator ccv;
 		ccv.start_luhn_algorithm(card_number);
 	} while (true);
-	return 0;
 }
